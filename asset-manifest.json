@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/studentlist-frontend/static/js/main.0fcbbf68.js",
+    "index.html": "/studentlist-frontend/index.html",
+    "main.0fcbbf68.js.map": "/studentlist-frontend/static/js/main.0fcbbf68.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.0fcbbf68.js"
+  ]
+}
