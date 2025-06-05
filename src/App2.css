@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px 20px;
+  background: #ffffffdd; /* 半透明白色 */
+  padding: 30px 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  text-align: center;
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #333;
+  transition: background-color 0.3s;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+li:hover {
+  background-color: #f0f8ff;
+}
+
+button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.7);
+}
+
+input, select {
+  padding: 10px 12px;
+  margin-right: 12px;
+  border-radius: 30px;
+  border: 1px solid #bbb;
+  font-weight: 600;
+  min-width: 150px;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 8px #667eeaaa;
+}
+
+.form-row {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.error {
+  color: #ff5555;
+  font-weight: 600;
+  margin-top: 10px;
+}
