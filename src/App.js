@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App2.css'; 
+console.log('API_BASE_URL:', API_BASE_URL);
 
 function App() {
   const [students, setStudents] = useState([]);
