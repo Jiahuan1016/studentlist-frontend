@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './App2.css';
+import './App2.css'; 
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -9,13 +9,15 @@ function App() {
   const [dob, setDob] = useState('');
   const [error, setError] = useState('');
 
+  const API_BASE_URL = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     fetchStudents();
   }, []);
 
   const fetchStudents = () => {
     setLoading(true);
-    fetch(`${process.env.REACT_APP_API_URL}/api/v1/student`)
+    fetch(`${API_BASE_URL}/api/v1/student`)
       .then(res => res.json())
       .then(data => {
         setStudents(data);
@@ -29,8 +31,9 @@ function App() {
       setError('Please fill in all fields.');
       return;
     }
+
     setError('');
-    fetch('http://localhost:8081/api/v1/student', {
+    fetch(`${API_BASE_URL}/api/v1/student`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, dob }),
@@ -49,7 +52,7 @@ function App() {
   };
 
   const deleteStudent = (id) => {
-    fetch(`http://localhost:8081/api/v1/student/${id}`, {
+    fetch(`${API_BASE_URL}/api/v1/student/${id}`, {
       method: 'DELETE',
     })
       .then(res => {
@@ -81,12 +84,11 @@ function App() {
           onChange={e => setEmail(e.target.value)}
         />
         <input
-  type="text"
-  placeholder="YYYY-MM-DD"
-  value={dob}
-  onChange={e => setDob(e.target.value)}
-/>
-
+          type="text"
+          placeholder="YYYY-MM-DD"
+          value={dob}
+          onChange={e => setDob(e.target.value)}
+        />
         <button onClick={addStudent}>Add Student</button>
       </div>
 
