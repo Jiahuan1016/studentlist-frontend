@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App2.css'; 
-console.log('API_BASE_URL:', API_BASE_URL);
+
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -11,7 +11,7 @@ function App() {
   const [error, setError] = useState('');
 
   const API_BASE_URL = process.env.REACT_APP_API_URL;
-
+console.log('API_BASE_URL:', API_BASE_URL);
   useEffect(() => {
     fetchStudents();
   }, []);
