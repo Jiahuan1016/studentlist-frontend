@@ -1,6 +1,7 @@
+/* 背景渐变且明显 */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -9,89 +10,100 @@ body {
   align-items: flex-start;
 }
 
+/* 标题明显白色带阴影 */
 h1 {
-  color: #fff;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+  color: white;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
+/* 容器半透明白背景带圆角和阴影 */
 .container {
   max-width: 700px;
   margin: 40px 20px;
-  background: #ffffffdd; /* 半透明白色 */
-  padding: 30px 40px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 35px 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
   text-align: center;
-  backdrop-filter: saturate(180%) blur(20px);
 }
 
+/* 去掉 ul 默认样式 */
 ul {
   list-style: none;
   padding: 0;
+  margin-top: 20px;
 }
 
+/* li 样式，左右排布，鼠标悬浮背景变色 */
 li {
-  padding: 12px 16px;
-  border-bottom: 1px solid #eee;
+  padding: 14px 20px;
+  border-bottom: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
-  color: #333;
-  transition: background-color 0.3s;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  color: #444;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #fefefe;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 li:hover {
-  background-color: #f0f8ff;
+  background-color: #ffebf1;
 }
 
+/* 按钮渐变色，圆角，阴影 */
 button {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
   border: none;
-  padding: 8px 16px;
+  padding: 10px 18px;
   color: white;
   border-radius: 30px;
   cursor: pointer;
   font-weight: 700;
-  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+  box-shadow: 0 6px 20px rgba(238, 9, 121, 0.6);
   transition: all 0.3s ease;
+  min-width: 90px;
 }
 
 button:hover {
-  background: linear-gradient(135deg, #764ba2, #667eea);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.7);
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  box-shadow: 0 8px 30px rgba(255, 106, 0, 0.8);
 }
 
+/* 输入框样式，圆角，内边距，边框及聚焦阴影 */
 input, select {
-  padding: 10px 12px;
-  margin-right: 12px;
+  padding: 12px 16px;
+  margin-right: 15px;
   border-radius: 30px;
-  border: 1px solid #bbb;
+  border: 2px solid #ff6a00;
   font-weight: 600;
-  min-width: 150px;
-  transition: border-color 0.3s;
+  min-width: 160px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus, select:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 8px #667eeaaa;
+  border-color: #ee0979;
+  box-shadow: 0 0 10px #ee0979aa;
 }
 
+/* 输入框和按钮容器 */
 .form-row {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 
+/* 错误提示红色加粗 */
 .error {
-  color: #ff5555;
-  font-weight: 600;
-  margin-top: 10px;
+  color: #cc0000;
+  font-weight: 700;
+  margin-top: 15px;
 }
